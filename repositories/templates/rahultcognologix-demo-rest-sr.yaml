@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: rahultcognologix
+    provider: github
+    repository: demo-rest
+  name: rahultcognologix-demo-rest
+spec:
+  description: Imported application for rahultcognologix/demo-rest
+  httpCloneURL: https://github.com/rahultcognologix/demo-rest.git
+  org: rahultcognologix
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: demo-rest
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/rahultcognologix/demo-rest.git
