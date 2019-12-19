@@ -1,0 +1,10 @@
+adminUser:
+  password: local:ugk8sjx/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: vaibhav@cognologix.com
+  token: local:ugk8sjx/pipelineUser:token
+  username: vnatu
+prow:
+  hmacToken: local:ugk8sjx/prow:hmacToken

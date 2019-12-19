@@ -1,34 +1,74 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/vnatu/environment-ugk8sjx-dev
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
-  provider: gke
-  zone: ""
-gitops: true
+  clusterName: ugk8sjx
+  environmentGitOwner: vnatu
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  provider: eks
+  region: us-west-2
+  registry: 516250856443.dkr.ecr.us-west-2.amazonaws.com
+  zone: us-west-2
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: 54.187.121.236.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 54.187.121.236.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://ugk8sjx-logs-737c5d5d-9b6c-4195-8bca-97ef73a13b0e
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://ugk8sjx-reports-085e1878-0e37-4755-b8ed-7f5a75392463
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://ugk8sjx-repository-0bd983df-c7b2-4908-809c-0d6b605ecc39
+vault: {}
+velero: {}
 versionStream:
-  ref: "master"
+  ref: v1.0.263
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
