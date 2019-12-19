@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: rahultcognologix
+  repo: demo-rest
+  url: https://github.com/rahultcognologix/demo-rest.git
+  version: ""
+  versionURL: ""
